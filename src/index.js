@@ -148,4 +148,4 @@ ngModule.factory('MivaRequests', ['$http', function( $http ) {
 
 }]);
 
-export ngModule;
+export default ngModule;
