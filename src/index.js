@@ -6,13 +6,13 @@
 
 (function( window, angular, undefined ) {
 
-	var ngModule = angular.module('MivaAPI', []);
+	var ngModule = angular.module('MivaRequests', []);
 	ngModule.config(function( $sceDelegateProvider ) {
 		$sceDelegateProvider.resourceUrlWhitelist([
 			'self'
 		]);
 	});
-	ngModule.factory('MivaAPI', ['$http', function( $http ) {
+	ngModule.factory('MivaRequests', ['$http', function( $http ) {
 
 		var self = this;
 
@@ -107,12 +107,12 @@
 			// validate parameters
 			if ( typeof endpoint != 'string' ) {
 
-				throw new TypeError( '[MivaAPI] - "endpoint" is not a string' );
+				throw new TypeError( '[MivaRequests] - "endpoint" is not a string' );
 
 			}
 			if ( typeof options != 'object' ) {
 
-				throw new TypeError( '[MivaAPI] - "options" is not an object' );
+				throw new TypeError( '[MivaRequests] - "options" is not an object' );
 
 			}
 
@@ -120,7 +120,7 @@
 			if ( endpoint == 'page' ) {
 				
 				if ( options.pageUrl === undefined ) {
-					throw new Error( '[MivaAPI] - Missing `pageUrl` option' );
+					throw new Error( '[MivaRequests] - Missing `pageUrl` option' );
 				}
 
 				self.pageConfig.url = options.pageUrl;
@@ -129,10 +129,10 @@
 			else if ( endpoint == 'clientside' ) {
 
 				if ( options.moduleRoot === undefined ) {
-					throw new Error( '[MivaAPI] - Missing `moduleRoot` option' );
+					throw new Error( '[MivaRequests] - Missing `moduleRoot` option' );
 				}
 				if ( options.storeCode === undefined ) {
-					throw new Error( '[MivaAPI] - Missing `storeCode` option' );
+					throw new Error( '[MivaRequests] - Missing `storeCode` option' );
 				}
 
 				self.clientsideConfig.url = options.moduleRoot + 'json.mvc';

@@ -1,5 +1,5 @@
 {
-	"name": "angular-ssapi",
+	"name": "angular-miva-requests",
 	"version": "0.1.0",
 	"description": "Just an AngularJS factory to assist with AJAX calls to Miva endpoints...",
 	"main": "dist/angular-miva-requests.js",
