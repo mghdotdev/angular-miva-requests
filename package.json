@@ -2,7 +2,7 @@
 	"name": "angular-miva-requests",
 	"version": "2.0.0",
 	"description": "Just an AngularJS factory to assist with AJAX calls to Miva endpoints...",
-	"main": "src/index.js",
+	"main": "dist/angular-miva-requests.js",
 	"scripts": {
 		"build": "webpack",
 		"watch": "webpack --watch",
