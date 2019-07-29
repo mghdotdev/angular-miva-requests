@@ -12,9 +12,6 @@ module.exports = {
 		path: path.resolve( __dirname, 'dist' ),
 		filename: 'angular-miva-requests.js'
 	},
-	externals: {
-		angular: 'angular'
-	},
 	optimization: {
 		minimizer: [
 			new UglifyJSPlugin({
