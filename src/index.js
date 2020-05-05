@@ -128,14 +128,14 @@
 			}
 			else if ( endpoint == 'clientside' ) {
 
-				if ( options.moduleRoot === undefined ) {
-					throw new Error( '[MivaRequests] - Missing `moduleRoot` option' );
+				if ( options.jsonUrl === undefined ) {
+					throw new Error( '[MivaRequests] - Missing `jsonUrl` option' );
 				}
 				if ( options.storeCode === undefined ) {
 					throw new Error( '[MivaRequests] - Missing `storeCode` option' );
 				}
 
-				self.clientsideConfig.url = options.moduleRoot + 'json.mvc';
+				self.clientsideConfig.url = options.jsonUrl;
 				self.clientsideConfig.params.Store_Code = options.storeCode;
 
 			}
